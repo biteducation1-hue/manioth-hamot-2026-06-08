@@ -13,6 +13,8 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direction:rtl;min-height:100vh}
+
+/* ── Hero ── */
 .hero{background:linear-gradient(135deg,#0d1117 0%,#1c2128 50%,#0d1117 100%);border-bottom:1px solid var(--border);padding:36px 20px 28px;text-align:center}
 .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;background:linear-gradient(135deg,var(--green),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
 .hero .subtitle{color:var(--muted);font-size:0.95rem;margin-bottom:18px}
@@ -21,8 +23,20 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
 .stat-chip span{color:var(--text);font-weight:700;margin-right:4px}
 .tv-watchlist-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:0.95rem;font-family:'Heebo',sans-serif;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s}
 .tv-watchlist-btn:hover{opacity:0.85}
-.warning{background:#161b22;border:1px solid #ffa657;border-right:4px solid #ffa657;color:#ffa657;padding:14px 18px;margin:20px auto;max-width:860px;border-radius:8px;font-size:0.92rem;direction:rtl;text-align:right}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:20px;max-width:1300px;margin:0 auto;padding:24px 16px}
+
+/* ── Disclaimer (always visible, fixed style) ── */
+.disclaimer{background:#0d1117;border:1px solid #3d2a00;border-right:4px solid var(--gold);color:#c9a227;padding:14px 18px;margin:20px auto;max-width:900px;border-radius:8px;font-size:0.88rem;line-height:1.6;text-align:right}
+.disclaimer strong{color:var(--gold)}
+
+/* ── Weekly intro ── */
+.intro-section{max-width:900px;margin:0 auto 8px;padding:0 16px}
+.intro-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 24px}
+.intro-box h2{font-size:1.05rem;font-weight:700;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.intro-box p{font-size:0.92rem;line-height:1.8;color:#cdd9e5;margin-bottom:12px;text-align:right}
+.intro-box p:last-child{margin-bottom:0}
+
+/* ── Grid & cards ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:20px;max-width:1300px;margin:0 auto;padding:20px 16px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.4)}
 .short-card{border-color:#3d1a1a}
@@ -30,7 +44,7 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
 .card-header{background:linear-gradient(135deg,#161b22,#1c2128);padding:14px 16px;border-bottom:1px solid var(--border)}
 .ticker-wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
 .ticker{font-size:1.35rem;font-weight:800;color:var(--accent)}
-.tv-link{display:inline-flex;align-items:center;font-size:1rem;text-decoration:none;opacity:.8;transition:opacity .2s}
+.tv-link{display:inline-flex;align-items:center;font-size:1.05rem;text-decoration:none;opacity:.75;transition:opacity .2s}
 .tv-link:hover{opacity:1}
 .company{color:var(--muted);font-size:0.85rem;flex:1}
 .exchange-badge{background:#21262d;color:var(--muted);font-size:0.7rem;padding:2px 8px;border-radius:10px;border:1px solid var(--border)}
@@ -46,7 +60,8 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
 .chart-hint{font-size:0.72rem;color:var(--muted);padding:4px 0;background:#0d1117;text-align:center}
 .analysis-text{padding:14px 16px;font-size:0.9rem;line-height:1.75;color:#cdd9e5;text-align:right;direction:rtl}
 .footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:0.82rem;border-top:1px solid var(--border);margin-top:20px}
-/* Lightbox */
+
+/* ── Lightbox ── */
 #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
 #lightbox.open{display:flex}
 #lightbox img{max-width:95vw;max-height:92vh;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.8)}
@@ -58,6 +73,7 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
   <img id="lb-img" src="" alt="chart"/>
 </div>
 
+<!-- Hero -->
 <div class="hero">
   <h1>🔥 מניות חמות השבוע</h1>
   <div class="subtitle">2026-06-08 · סריקת שוק שבועית</div>
@@ -71,10 +87,20 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
   </a>
 </div>
 
-<div class="warning">
-  ⚠️ <strong>אזהרה:</strong> המידע המוצג הוא לצרכי לימוד בלבד ואינו מהווה המלצת השקעה. כל החלטת מסחר היא באחריות המשתמש בלבד.
+<!-- Fixed disclaimer -->
+<div class="disclaimer" style="max-width:900px;margin:20px auto 0;">
+  ⚠️ <strong>הצהרת אחריות:</strong> כל המניות כאן הן לצורכי לימוד ומחקר בלבד ואינן מהוות המלצת השקעה. השקעה בשוק ההון כרוכה בסיכון לאובדן הון. יש לבצע מחקר עצמאי לפני כל החלטת השקעה.
 </div>
 
+<!-- Weekly intro -->
+<div class="intro-section" style="margin-top:16px;">
+  <div class="intro-box">
+    <h2>📋 פתיח השבוע</h2>
+    <p>שבוע חדש, רשימת מניות חדשה — אבל גם כמה דברים שחשוב לזכור לפני שמתחילים לחפש עסקאות.</p><p>שבוע המסחר האחרון הסתיים בלחץ מכירות משמעותי ובירידות חדות ברוב המדדים, כך שקיים סיכוי שהחולשה שראינו בסוף השבוע תמשיך ללוות את השוק גם בימים הקרובים.</p><p>לכן, השבוע יותר מתמיד חשוב להימנע מכניסות פזיזות רק בגלל נר ירוק כזה או אחר. שוק חלש יודע לייצר לא מעט מלכודות שוורים, ובתקופות כאלה הסבלנות היא לעיתים היתרון הגדול ביותר של הסוחר.</p><p>בנוסף, השבוע צפויה להתפרסם הודעת האינפלציה בארה"ב, אחד מנתוני המאקרו החשובים ביותר עבור השווקים. הנתון הזה עשוי להשפיע על ציפיות הריבית ועל הדרך שבה המשקיעים מעריכים את הצעדים הבאים של הפד, ולכן הוא צפוי להוסיף לא מעט תנודתיות למסחר.</p><p>כרגיל, המטרה שלנו היא לא לנחש לאן השוק ילך, אלא להמתין בסבלנות לתרחישים ברורים ולפעול רק כשהגרף נותן לנו את האישור שאנחנו מחפשים. 🎯📈</p>
+  </div>
+</div>
+
+<!-- Cards -->
 <div class="grid">
 
     <div class="card">
