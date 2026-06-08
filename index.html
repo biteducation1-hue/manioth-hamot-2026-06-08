@@ -6,15 +6,9 @@
 <title>מניות חמות 🔥 | 2026-06-08</title>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0d1117;--surface:#161b22;--border:#30363d;
-  --green:#26c281;--red:#f85149;--accent:#58a6ff;
-  --text:#e6edf3;--muted:#8b949e;--gold:#ffa657;
-}
+:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--green:#26c281;--red:#f85149;--accent:#58a6ff;--text:#e6edf3;--muted:#8b949e;--gold:#ffa657}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direction:rtl;min-height:100vh}
-
-/* Hero */
 .hero{background:linear-gradient(135deg,#0d1117 0%,#1c2128 50%,#0d1117 100%);border-bottom:1px solid var(--border);padding:36px 20px 28px;text-align:center}
 .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;background:linear-gradient(135deg,var(--green),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
 .hero .subtitle{color:var(--muted);font-size:0.95rem;margin-bottom:18px}
@@ -23,19 +17,13 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
 .stat-chip span{color:var(--text);font-weight:700;margin-right:4px}
 .tv-watchlist-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:0.95rem;font-family:'Heebo',sans-serif;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s}
 .tv-watchlist-btn:hover{opacity:0.85}
-
-/* Intro */
 .intro-section{max-width:900px;margin:20px auto 0;padding:0 16px}
 .intro-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 24px}
 .intro-box p{font-size:0.93rem;line-height:1.85;color:#cdd9e5;margin-bottom:14px;text-align:right}
 .intro-box p:last-child{margin-bottom:0}
-
-/* Disclaimer */
 .disclaimer{max-width:900px;margin:14px auto 0;padding:0 16px}
 .disclaimer-inner{background:#0d1117;border:1px solid #3d2a00;border-right:4px solid var(--gold);color:#c9a227;padding:13px 18px;border-radius:8px;font-size:0.87rem;line-height:1.6;text-align:right}
 .disclaimer-inner strong{color:var(--gold)}
-
-/* Grid */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:20px;max-width:1300px;margin:20px auto 0;padding:0 16px 24px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.4)}
@@ -48,43 +36,25 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
 .exchange-badge{background:#21262d;color:var(--muted);font-size:0.7rem;padding:2px 8px;border-radius:10px;border:1px solid var(--border)}
 .exchange-badge.tase{background:#1a2a1a;color:var(--green)}
 .ticker-actions{margin-bottom:8px}
-.tv-text-link{
-  display:inline-block;
-  color:var(--accent);
-  font-size:0.82rem;
-  font-weight:600;
-  text-decoration:none;
-  background:#1a2540;
-  border:1px solid #2a3f6a;
-  border-radius:6px;
-  padding:3px 10px;
-  transition:background .2s,color .2s;
-}
+.tv-text-link{display:inline-block;color:var(--accent);font-size:0.82rem;font-weight:600;text-decoration:none;background:#1a2540;border:1px solid #2a3f6a;border-radius:6px;padding:3px 10px;transition:background .2s,color .2s}
 .tv-text-link:hover{background:#1e3a7a;color:#fff}
 .tags-wrap{display:flex;gap:6px;flex-wrap:wrap}
 .tag{background:#21262d;color:var(--accent);font-size:0.75rem;padding:3px 10px;border-radius:12px;border:1px solid var(--border)}
 .tag.short{background:#2d1a1a;color:var(--red);border-color:#3d1a1a}
-.tag.green{background:#1a2d1a;color:var(--green);border-color:#1f3a1f}
 .ratio-badge{background:#1a1a2d;color:var(--gold);font-size:0.75rem;padding:3px 10px;border-radius:12px;border:1px solid #2d2d4d}
 .wait-chip{background:#1a2d2d;color:#56d4d4;font-size:0.75rem;padding:3px 10px;border-radius:12px;border:1px solid #1f3a3a}
-.chart-wrap{position:relative;background:#0d1117;overflow:hidden}
+.chart-wrap{background:#0d1117;overflow:hidden}
 .chart-wrap img{width:100%;height:auto;display:block;cursor:zoom-in}
 .chart-hint{font-size:0.72rem;color:var(--muted);padding:4px 0;background:#0d1117;text-align:center}
 .analysis-text{padding:14px 16px;font-size:0.9rem;line-height:1.75;color:#cdd9e5;text-align:right;direction:rtl}
 .footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:0.82rem;border-top:1px solid var(--border);margin-top:10px}
-
-/* Lightbox */
 #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
 #lightbox.open{display:flex}
 #lightbox img{max-width:95vw;max-height:92vh;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.8)}
 </style>
 </head>
 <body>
-
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lb-img" src="" alt="chart"/>
-</div>
-
+<div id="lightbox" onclick="closeLightbox()"><img id="lb-img" src="" alt="chart"/></div>
 <div class="hero">
   <h1>🔥 מניות חמות השבוע</h1>
   <div class="subtitle">2026-06-08 · סריקת שוק שבועית</div>
@@ -95,30 +65,18 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
   </div>
   <a href="https://www.tradingview.com/watchlists/334808083/" target="_blank" class="tv-watchlist-btn">📊 רשימת מעקב בטריידינג וויו</a>
 </div>
-
-<div class="intro-section">
-  <div class="intro-box">
-    <p>שבוע חדש, רשימת מניות חדשה — אבל גם כמה דברים שחשוב לזכור לפני שמתחילים לחפש עסקאות.</p><p>שבוע המסחר האחרון הסתיים בלחץ מכירות משמעותי ובירידות חדות ברוב המדדים, כך שקיים סיכוי שהחולשה שראינו בסוף השבוע תמשיך ללוות את השוק גם בימים הקרובים.</p><p>לכן, השבוע יותר מתמיד חשוב להימנע מכניסות פזיזות רק בגלל נר ירוק כזה או אחר. שוק חלש יודע לייצר לא מעט מלכודות שוורים, ובתקופות כאלה הסבלנות היא לעיתים היתרון הגדול ביותר של הסוחר.</p><p>בנוסף, השבוע צפויה להתפרסם הודעת האינפלציה בארה"ב, אחד מנתוני המאקרו החשובים ביותר עבור השווקים. הנתון הזה עשוי להשפיע על ציפיות הריבית ועל הדרך שבה המשקיעים מעריכים את הצעדים הבאים של הפד, ולכן הוא צפוי להוסיף לא מעט תנודתיות למסחר.</p><p>כרגיל, המטרה שלנו היא לא לנחש לאן השוק ילך, אלא להמתין בסבלנות לתרחישים ברורים ולפעול רק כשהגרף נותן לנו את האישור שאנחנו מחפשים. 🎯📈</p>
-  </div>
-</div>
-
-<div class="disclaimer">
-  <div class="disclaimer-inner">
-    ⚠️ <strong>הצהרת אחריות:</strong> כל המניות כאן הן לצורכי לימוד ומחקר בלבד ואינן מהוות המלצת השקעה. השקעה בשוק ההון כרוכה בסיכון לאובדן הון. יש לבצע מחקר עצמאי לפני כל החלטת השקעה.
-  </div>
-</div>
-
+<div class="intro-section"><div class="intro-box"><p>שבוע חדש, רשימת מניות חדשה — אבל גם כמה דברים שחשוב לזכור לפני שמתחילים לחפש עסקאות.</p><p>שבוע המסחר האחרון הסתיים בלחץ מכירות משמעותי ובירידות חדות ברוב המדדים, כך שקיים סיכוי שהחולשה שראינו בסוף השבוע תמשיך ללוות את השוק גם בימים הקרובים.</p><p>לכן, השבוע יותר מתמיד חשוב להימנע מכניסות פזיזות רק בגלל נר ירוק כזה או אחר. שוק חלש יודע לייצר לא מעט מלכודות שוורים, ובתקופות כאלה הסבלנות היא לעיתים היתרון הגדול ביותר של הסוחר.</p><p>בנוסף, השבוע צפויה להתפרסם הודעת האינפלציה בארה"ב, אחד מנתוני המאקרו החשובים ביותר עבור השווקים. הנתון הזה עשוי להשפיע על ציפיות הריבית ועל הדרך שבה המשקיעים מעריכים את הצעדים הבאים של הפד, ולכן הוא צפוי להוסיף לא מעט תנודתיות למסחר.</p><p>כרגיל, המטרה שלנו היא לא לנחש לאן השוק ילך, אלא להמתין בסבלנות לתרחישים ברורים ולפעול רק כשהגרף נותן לנו את האישור שאנחנו מחפשים. 🎯📈</p></div></div>
+<div class="disclaimer"><div class="disclaimer-inner">⚠️ <strong>הצהרת אחריות:</strong> כל המניות כאן הן לצורכי לימוד ומחקר בלבד ואינן מהוות המלצת השקעה. השקעה בשוק ההון כרוכה בסיכון לאובדן הון. יש לבצע מחקר עצמאי לפני כל החלטת השקעה.</div></div>
 <div class="grid">
-
     <div class="card">
       <div class="card-header">
         <div class="ticker-wrap">
           <span class="ticker">TW</span>
-          <span class="company">TransUnion Worldwide</span>
-          <span class="exchange-badge ">NYSE</span>
+          <span class="company">Tradeweb Markets</span>
+          <span class="exchange-badge ">NASDAQ</span>
         </div>
         <div class="ticker-actions">
-          <a href="https://www.tradingview.com/chart/?symbol=NYSE%3ATW" target="_blank" class="tv-text-link">לפתיחת הגרף בTV ↗</a>
+          <a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ATW" target="_blank" class="tv-text-link">לפתיחת הגרף בTV ↗</a>
         </div>
         <div class="tags-wrap"><span class="tag">תמיכה</span><span class="ratio-badge">🎯 יחס 1:2.5–1:3</span></div>
       </div>
@@ -336,24 +294,12 @@ body{background:var(--bg);color:var(--text);font-family:'Heebo',sans-serif;direc
         <div class="chart-hint">🔍 לחיצה על הגרף מגדילה אותו</div>
       </div>
       <div class="analysis-text">חזרה לאזור ההתנגדות, פרצה אותו במהלך השבוע אך סיימה בסגירה מתחתיו. השילוב של פתיל מעל ההתנגדות וסגירה מתחתיה מצביע על חולשה מצד הקונים. המגמה הראשית עדיין מגמת ירידה ברורה ולכן המניה ממשיכה להיות מעניינת לחיפוש עסקאות שורט.</div>
-    </div>
-</div>
-
-<div class="footer">
-  מניות חמות &copy; 2026-06-08 · נבנה עם ❤️ בעזרת Claude AI
-</div>
-
+    </div></div>
+<div class="footer">מניות חמות &copy; 2026-06-08 · נבנה עם ❤️ בעזרת Claude AI</div>
 <script>
-function openLightbox(img){
-  document.getElementById('lb-img').src = img.src;
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow='';
-}
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+function openLightbox(img){document.getElementById('lb-img').src=img.src;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()})
 </script>
 </body>
 </html>
